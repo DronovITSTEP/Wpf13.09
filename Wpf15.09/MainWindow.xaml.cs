@@ -15,6 +15,28 @@ using System.Windows.Shapes;
 
 namespace Wpf15._09
 {
+
+    class A
+    {
+        public void Show()
+        {
+            Console.WriteLine("A");
+        }
+    }
+    class B : A {
+        public void Show()
+        {
+            Console.WriteLine("B");
+        }
+    }
+    class C: B 
+    {
+        public void Show()
+        {
+            Console.WriteLine("C");
+        }
+    }
+
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
@@ -34,7 +56,7 @@ namespace Wpf15._09
         private void No_MouseEnter(object sender, MouseEventArgs e)
         {
             //Console.WriteLine("Мышка в кнопке");
-
+            
             /*double windowWidth = Canva.ActualWidth;
             double windowHeight = Canva.ActualHeight;
 
@@ -49,11 +71,13 @@ namespace Wpf15._09
 
             Canvas.SetLeft(NoButton, randomX);
             Canvas.SetTop(NoButton, randomY);*/
-            if (NoButton.Content.ToString() == "Нет")
+
+
+            if ((sender as Button).Name == "NoButton")
             {
                 NoButton.Content = "Да";
                 YesButton.Content = "Нет";
-            }
+            }          
             else
             {
                 NoButton.Content = "Нет";
