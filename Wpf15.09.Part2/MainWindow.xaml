@@ -1,0 +1,30 @@
+﻿<Window x:Class="Wpf15._09.Part2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf15._09.Part2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <GroupBox Header="Питомцы" Width="139" 
+                  Canvas.Left="63" HorizontalAlignment="Center" Height="249" VerticalAlignment="Top" >
+            <Canvas>
+                <RadioButton Content="Кот" Canvas.Left="10" Canvas.Top="68"/>
+                <RadioButton Content="Собака" Canvas.Left="10" Canvas.Top="126"/>
+                <RadioButton Content="Попугай" Canvas.Left="10" Canvas.Top="97"/>
+            </Canvas>
+        </GroupBox>
+        <TabControl Height="139" Width="395" HorizontalAlignment="Left" Canvas.Left="297" VerticalAlignment="Top" Canvas.Top="78">
+            <TabItem Header="Кот">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Собака">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Попугай">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+    </Canvas>
+</Window>
