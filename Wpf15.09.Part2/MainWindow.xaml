@@ -8,23 +8,27 @@
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
         <GroupBox Header="Питомцы" Width="139" 
-                  Canvas.Left="63" HorizontalAlignment="Center" Height="249" VerticalAlignment="Top" >
-            <Canvas>
-                <RadioButton Content="Кот" Canvas.Left="10" Canvas.Top="68"/>
-                <RadioButton Content="Собака" Canvas.Left="10" Canvas.Top="126"/>
-                <RadioButton Content="Попугай" Canvas.Left="10" Canvas.Top="97"/>
+                  Canvas.Left="63" HorizontalAlignment="Center" 
+                  Height="249" VerticalAlignment="Top" >
+            <Canvas x:Name="pets">
+                <RadioButton Content="Кот" Canvas.Left="10" Canvas.Top="68" PreviewMouseDown="Click_Mouse"/>
+                <RadioButton Content="Собака" Canvas.Left="10" Canvas.Top="126" PreviewMouseDown="Click_Mouse"/>
+                <RadioButton Content="Попугай" Canvas.Left="10" Canvas.Top="97" PreviewMouseDown="Click_Mouse"/>
             </Canvas>
         </GroupBox>
-        <TabControl Height="139" Width="395" HorizontalAlignment="Left" Canvas.Left="297" VerticalAlignment="Top" Canvas.Top="78">
-            <TabItem Header="Кот">
-                <Grid Background="#FFE5E5E5"/>
+        <TabControl x:Name="animals" Height="139" Width="395" HorizontalAlignment="Left" 
+                    Canvas.Left="297" VerticalAlignment="Top" Canvas.Top="78">
+            <TabItem Header="Кот" PreviewMouseDown="Click_Mouse">
+                <ListBox x:Name="Cats"/>
             </TabItem>
-            <TabItem Header="Собака">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Собака" PreviewMouseDown="Click_Mouse">
+                <ListBox x:Name="Dogs"/>
             </TabItem>
-            <TabItem Header="Попугай">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Попугай" PreviewMouseDown="Click_Mouse">
+                <ListBox x:Name="Parrots"/>
             </TabItem>
         </TabControl>
+        <TextBlock x:Name="nameAnimal" Canvas.Left="95" TextWrapping="Wrap" 
+                   Canvas.Top="290"/>
     </Canvas>
 </Window>
